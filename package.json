@@ -22,11 +22,12 @@
     "thinkjs": "^3.0.0"
   },
   "devDependencies": {
-    "think-watcher": "^3.0.0",
+    "ava": "^0.18.0",
     "eslint": "^4.2.0",
     "eslint-config-think": "^1.0.0",
-    "ava": "^0.18.0",
-    "nyc": "^7.0.0"
+    "nyc": "^7.0.0",
+    "think-view-pug": "^1.0.7",
+    "think-watcher": "^3.0.0"
   },
   "repository": "",
   "license": "MIT",
