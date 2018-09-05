@@ -1,8 +1,8 @@
 const fileCache = require('think-cache-file');
-const nunjucks = require('think-view-nunjucks');
+const pug = require('think-view-pug');
 const fileSession = require('think-session-file');
 const mysql = require('think-model-mysql');
-const {Console, File, DateFile} = require('think-logger3');
+const { Console, File, DateFile } = require('think-logger3');
 const path = require('path');
 const isDev = think.env === 'development';
 
@@ -36,11 +36,11 @@ exports.model = {
   },
   mysql: {
     handle: mysql,
-    database: '',
+    database: 'thinkjs',
     prefix: 'think_',
     encoding: 'utf8',
     host: '127.0.0.1',
-    port: '',
+    port: '3306',
     user: 'root',
     password: 'root',
     dateStrings: true
@@ -71,14 +71,24 @@ exports.session = {
  * @type {Object}
  */
 exports.view = {
-  type: 'nunjucks',
+  type: 'pug',
   common: {
     viewPath: path.join(think.ROOT_PATH, 'view'),
     sep: '_',
-    extname: '.html'
+    extname: '.pug'
   },
-  nunjucks: {
-    handle: nunjucks
+  pug: {
+    handle: pug,
+    options: {
+      cache: false
+    },
+    beforeRender: (pug, handleOptions) => {
+      pug.filters['my-own-filter'] = (text, options) => {
+        if (options.addStart) text = 'Start\n' + text;
+        if (options.addEnd) text = text + '\nEnd';
+        return text;
+      };
+    }
   }
 };
 
