@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="renderer" content="webkit")
+    meta(name="keywords" content="{{controller.keywords}}")
+    meta(name="description" content="{{controller.description}}")
+    meta(name="Author" content="blog [blog.atoding.cn]")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title= pageTitle
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="/static/css/index_index.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/index_index.styl" rel="stylesheet" type="text/css" />
+
+    block stylesheets
+      link(href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css", rel="stylesheet", crossorigin="anonymous")
+
+    // bring support for HTML5 and CSS3 to old IEs
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  body
+    include int_header.pug
+    block content
+    include int_footer.pug
+  
+    block javascripts
+    script(src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js")
+    script(src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js", crossorigin="anonymous")
