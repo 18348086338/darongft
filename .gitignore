@@ -33,6 +33,7 @@ output.tar.gz
 runtime/
 app/
 node_modules/
+frontend/node_modules/
 
 config.development.js
 adapter.development.js
