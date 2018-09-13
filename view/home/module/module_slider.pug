@@ -1,0 +1,11 @@
+div(class="swiper-container")
+  div(class="swiper-wrapper")
+    each val, index in slider.sliders
+      div(class="swiper-slide")
+        img(src=val.imgSrc, alt=val.desc)
+        h1(class="slide-text")=val.tit
+        p(class="slide-text")=val.desc
+div(class="swiper-pagination")
+
+script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js")
+script(src="/static/js/module/slider.js" type="text/javascript")

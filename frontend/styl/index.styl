@@ -1,9 +1,35 @@
 @import "inc.styl"
 @import "base.styl"
+@import "./module/slider.styl"
 
 .header
-  background: headBg
-  height :80px
-  display: flex
-  justify-content:center
-  align-items:center
+  background headBg
+  height 65px
+  display flex
+  justify-content center
+  align-items center
+  color rgba(255, 255, 255, 0.8)
+.nav
+  width 900px
+  font-size 16px
+  ul
+    display inline-flex
+    li
+      padding-right 5px
+      cursor pointer
+      &:hover
+        color rgba(255, 255, 255, 1)
+.contact
+  width 100px
+  ul
+    display flex
+    justify-content space-around
+    li
+      cursor pointer
+      color red
+      &:hover
+        color rgba(255, 255, 255, 1)
+
+
+
+    

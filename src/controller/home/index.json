@@ -1,0 +1,61 @@
+{
+  "pageTitle": "达荣丰泰",
+  "name": "这是一个pug",
+  "foog": true,
+  "youAreUsingPug": true,
+  "headJson": {
+    "logoSrc": "/static/image/logo.gif",
+    "navigation": [
+      {
+        "name": "首页",
+        "link": "/"
+      },
+      {
+        "name": "产品展示",
+        "link": "/"
+      },
+      {
+        "name": "风采展示",
+        "link": "/"
+      },
+      {
+        "name": "关于我们",
+        "link": "/"
+      }
+    ]
+  },
+  "slider": {
+    "sliders": [
+      {
+        "imgSrc": "/static/image/slider/1.jpg",
+        "tit": "图片1",
+        "desc": "这是图片1的描述",
+        "link": "/"
+      },
+      {
+        "imgSrc": "/static/image/slider/2.jpg",
+        "tit": "图片2",
+        "desc": "这是图片2的描述",
+        "link": "/"
+      },
+      {
+        "imgSrc": "/static/image/slider/3.jpg",
+        "tit": "图片3",
+        "desc": "这是图片3的描述",
+        "link": "/"
+      },
+      {
+        "imgSrc": "/static/image/slider/4.jpg",
+        "tit": "图片4",
+        "desc": "这是图片4的描述",
+        "link": "/"
+      },
+      {
+        "imgSrc": "/static/image/slider/5.jpg",
+        "tit": "图片5",
+        "desc": "这是图片5的描述",
+        "link": "/"
+      }
+    ]
+  }
+}

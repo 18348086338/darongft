@@ -1,15 +1,15 @@
-//- h1 我只是一个头部
-//- #container.col
-//-   if youAreUsingPug
-//-     p 这是一个header，我还有很大用处
-//-   else
-//-     p GO ON!
-//- p.
-//-   Pug is a terse and simple templating language with a
-//-   strong focus on performance and powerful features.
-//- h1='最新的头部的： '+name+'5555'
-//- <link href="/static/assets/css/index.css" rel="stylesheet" type="text/css" />
 header(class="header")
   div(class="logo")
     img(src=headJson.logoSrc)
-  div="这是一个头部"
+  nav(class="nav")
+    ul
+      each val, index in headJson.navigation
+        li= val.name
+  div(class="contact")
+    ul
+      li
+        i(class="fa fa-phone-square fa-3x")
+        span(id="tel")
+      li
+        i(class="fa fa-share-square fa-3x")
+        span(id="follow")
