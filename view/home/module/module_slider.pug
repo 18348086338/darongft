@@ -1,11 +1,13 @@
+
 div(class="swiper-container")
   div(class="swiper-wrapper")
     each val, index in slider.sliders
       div(class="swiper-slide")
         img(src=val.imgSrc, alt=val.desc)
-        h1(class="slide-text")=val.tit
-        p(class="slide-text")=val.desc
+        h1(class="slide-text ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s")=val.tit
+        p(class="slide-text ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s")=val.desc
 div(class="swiper-pagination")
 
 script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js")
+script(src="/static/js/swiper.animate1.0.3.min.js" type="text/javascript")
 script(src="/static/js/module/slider.js" type="text/javascript")
